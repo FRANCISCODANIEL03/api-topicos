@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
-require('dotenv').config()
+require('dotenv').config();
 
 const app = express();//creamos la instancia del servidor express
 
