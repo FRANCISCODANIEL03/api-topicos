@@ -1,6 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
+require('dotenv').config()
 
 const app = express();//creamos la instancia del servidor express
 
@@ -15,11 +16,11 @@ app.listen(PORT, () => { console.log("Servidor corriendo en http://localhost:" +
 
 //conexion con mysql
 const conection = mysql.createConnection({
-    host: "roundhouse.proxy.rlwy.net",
-    user: "root",
-    password: "ihIQNmQEjowdXvqvsadUNsbaOtbgYaRZ",
-    port: 11642,
-    database: "railway"
+    host: process.env.BD_HOST,
+    user: process.env.BD_USER,
+    password: process.env.BD_PASSWORD,
+    port: process.env.BD_PORT,
+    database: process.env.BD_DATABASE
 });
 
 conection.connect((err) => {
