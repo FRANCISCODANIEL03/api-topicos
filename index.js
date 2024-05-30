@@ -12,7 +12,7 @@ app.use(cors());
 //Iniciamos el servidor
 const PORT = 3000;
 
-app.listen(PORT, () => { console.log("Servidor corriendo en http://localhost:" + PORT); });
+app.listen(PORT, () => { console.log("Servidor corriendo en https://api-topicos-1.onrender.com" + PORT); });
 
 //conexion con mysql
 const conection = mysql.createConnection({
